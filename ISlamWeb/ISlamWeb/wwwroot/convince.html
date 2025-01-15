@@ -1,0 +1,768 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitation to Islam</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f4f7f8;
+            color: #333;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(to right, #006400, #32cd32);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        h2, h3 {
+            color: #2e8b57;
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        section {
+            padding: 40px 20px;
+        }
+
+        .hero {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://i.pinimg.com/736x/21/b3/9f/21b39f6a5a7939a3898c5c3c34eb3b7d.jpg') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+            .hero h1 {
+                font-size: 3rem;
+                animation: fadeIn 2s ease-in-out;
+            }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+            .card:hover {
+                transform: scale(1.05);
+            }
+
+        .faq-section {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+            .faq-item h4 {
+                font-size: 1.2rem;
+                color: #006400;
+                cursor: pointer;
+            }
+
+            .faq-item p {
+                display: none;
+                margin-top: 10px;
+            }
+
+        footer {
+            background: #006400;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+            footer a {
+                color: #90ee90;
+                text-decoration: underline;
+            }
+
+                footer a:hover {
+                    color: #fff;
+                }
+    </style>
+</head>
+<body>
+    <style>
+        #audioRecitations {
+            background: linear-gradient(to bottom right, #f0f8ff, #e6ffe6);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+            #audioRecitations h2 {
+                font-size: 2rem;
+                color: #2e8b57;
+                margin-bottom: 15px;
+                text-transform: uppercase;
+                border-bottom: 3px solid #32cd32;
+                display: inline-block;
+            }
+
+            #audioRecitations p {
+                font-size: 1.2rem;
+                color: #333;
+                margin-bottom: 20px;
+            }
+
+        #recitationDropdown {
+            padding: 10px;
+            font-size: 1.1rem;
+            border: 2px solid #32cd32;
+            border-radius: 5px;
+            margin-top: 10px;
+            background-color: #f9f9f9;
+            color: #006400;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+            #recitationDropdown:focus {
+                outline: none;
+                border-color: #2e8b57;
+                box-shadow: 0 0 5px rgba(46, 139, 87, 0.5);
+            }
+
+        #recitationAudio {
+            width: 100%;
+            max-width: 500px;
+            margin-top: 20px;
+            border: 2px solid #32cd32;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+
+    <style>
+        /* Global Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Navbar Styling */
+        nav {
+            background-color: #2e8b57;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+            nav .nav-link {
+                color: #fff !important;
+                font-weight: bold;
+            }
+
+                nav .nav-link:hover {
+                    color: #ffd700 !important;
+                }
+
+        /* "Did You Know?" Section */
+        #didYouKnow {
+            background: linear-gradient(to bottom right, #e6ffe6, #f0f8ff);
+            padding: 60px 20px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            position: relative;
+        }
+
+            #didYouKnow h2 {
+                font-size: 2.5rem;
+                color: #006400;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+                border-bottom: 4px solid #32cd32;
+                display: inline-block;
+            }
+
+        .fact {
+            margin: 20px 0;
+            font-size: 1.3rem;
+            color: #555;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-left: 4px solid #32cd32;
+            text-align: left;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+            .fact i {
+                color: #32cd32;
+                margin-right: 10px;
+            }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Interactive Buttons */
+        .btn-fact {
+            margin: 20px 5px;
+            padding: 10px 15px;
+            background-color: #006400;
+            color: white;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+            .btn-fact:hover {
+                background-color: #32cd32;
+                transform: scale(1.1);
+            }
+
+        /* Scroll-to-Top Button */
+        #scrollToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #32cd32;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+            #scrollToTop:hover {
+                background-color: #006400;
+                transform: scale(1.2);
+            }
+    </style>
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Your other content -->
+    <!-- Required JavaScript for Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container-fluid">
+            <!-- Brand -->
+            <a class="navbar-brand" href="index.html">Discover Islam</a>
+
+            <!-- Hamburger Menu for Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <!-- Home -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <!-- About Islam Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="learnMoreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            About Islam
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="learnMoreDropdown">
+                            <li><a class="dropdown-item" href="Pillars.html">Islamic Pillars</a></li>
+                            <li><a class="dropdown-item" href="WomenInIslam.html">Women in Islam</a></li>
+                            <li><a class="dropdown-item" href="recitation.html">Recitations</a></li>
+                            <li><a class="dropdown-item" href="DoYouKnow.html">Did You Know</a></li>
+                            <li><a class="dropdown-item" href="PrayerTime.html">Prayer Times</a></li>
+                            <li><a class="dropdown-item" href="IslamTimeLine.html">Islamic Timeline</a></li>
+                           
+                        </ul>
+                    </li>
+
+                    <!-- The Atheism Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="convinceDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            The Atheism
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="convinceDropdown">
+                            <li><a class="dropdown-item" href="convince.html">Evidence of God's existence  </a></li>
+                            <li><a class="dropdown-item" href="Scientific.html">Scientific Evidence</a></li>
+                            <li><a class="dropdown-item" href="Philosophical.html">Philosophical Reflections</a></li>
+                            <li><a class="dropdown-item" href="Real.html">Real-Life Stories</a></li>
+                            <li><a class="dropdown-item" href="Reflection.html">A Call to Reflection</a></li>
+                            <li><a class="dropdown-item" href="Impact.html">Impact of Belief</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <style>
+        /* Navbar Styling */
+        .navbar {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .nav-link {
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+            .nav-link:hover,
+            .nav-link.active {
+                background-color: #28a745; /* Lighter green for hover effect */
+                color: #fff !important;
+                border-radius: 5px;
+            }
+
+        /* Dropdown Menu Styling */
+        .dropdown-menu {
+            background-color: #28a745; /* Match navbar green */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .dropdown-item {
+            font-size: 1rem;
+            padding: 12px 20px;
+            transition: all 0.3s ease-in-out;
+            white-space: nowrap;
+        }
+
+            .dropdown-item:hover {
+                background-color: #218838; /* Slightly darker green */
+                color: #fff;
+                border-radius: 5px;
+            }
+
+        /* Adjust Dropdown Placement */
+        .navbar .dropdown-menu {
+            left: auto; /* Ensure proper alignment */
+            right: 0; /* Align to the right edge of the button */
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .dropdown-menu {
+                min-width: 100%; /* Ensure full width on smaller screens */
+                padding: 10px 0;
+            }
+
+            .dropdown-item {
+                font-size: 1rem;
+                padding: 15px 20px; /* More padding for touch devices */
+            }
+        }
+    </style>
+
+    <header>
+        Invitation to Discover Islam
+    </header>
+
+    <section class="hero">
+        <h1>"The truth is clear from falsehood." - Quran 2:256</h1>
+    </section>
+
+    <section>
+        <h2>Why Islam?</h2>
+        <p>Islam presents a simple, logical, and universal message: to recognize the One Creator and follow His guidance to achieve peace in this life and success in the Hereafter. Here are some key aspects of Islam that address common questions and concerns:</p>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h3 class="text-center">Unity of God</h3>
+                    <p>Islam teaches the existence of One God who is eternal, omnipotent, and merciful. There is no intermediary between the Creator and His creation.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h3 class="text-center">Purpose of Life</h3>
+                    <p>Islam provides a clear answer to the question of why we exist: to know and worship the Creator and to live in harmony with His will.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h3 class="text-center">Scientific Compatibility</h3>
+                    <p>The Quran contains verses that align with modern science, demonstrating its divine origin and relevance in contemporary times.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="convincingAtheists" class="container my-5">
+        <h2 class="text-center mb-4">Why Islam? A Message for the Seeker of Truth</h2>
+        <div class="card p-4 shadow-lg">
+            <p class="mb-4">Dear friend,</p>
+            <p>
+                I invite you to explore a message that has guided millions toward purpose and fulfillment. If you identify as an atheist or a seeker of truth, I understand your skepticism—it often arises from a desire for clarity, logic, and evidence. Islam offers answers that are both rational and spiritually fulfilling.
+            </p>
+
+            <h4>1. The Universe Has a Creator</h4>
+            <p>
+                The intricate design of the universe points toward an intelligent Creator. From the fine-tuning of physical constants to the complexity of life, everything seems meticulously planned. The Quran asks us to reflect:
+                <blockquote>
+                    "Were they created by nothing, or were they themselves the creators?" - Quran 52:35
+                </blockquote>
+                This verse encourages deep contemplation about the origins of life and existence.
+            </p>
+
+            <h4>2. The Quran: A Living Miracle</h4>
+            <p>
+                The Quran is not just a book; it is a timeless miracle. Revealed over 1400 years ago, it contains knowledge that modern science has only recently discovered. For instance, the Quran describes the development of the human embryo:
+                <blockquote>
+                    "We created man from an extract of clay. Then We placed him as a drop in a place of settlement, firmly fixed. Then We made the drop into a clinging clot, and We made the clot into a lump..." - Quran 23:12-14
+                </blockquote>
+                How could an unlettered man in 7th-century Arabia have known this? Such insights point toward divine authorship.
+            </p>
+
+            <h4>3. A Purposeful Life</h4>
+            <p>
+                Atheism often leaves individuals grappling with existential questions: Why am I here? What happens after I die? Islam provides clear answers: we are here to worship and know our Creator. This worship is not limited to rituals but extends to kindness, justice, and striving for self-improvement. The Quran beautifully states:
+                <blockquote>
+                    "And I did not create the jinn and mankind except to worship Me." - Quran 51:56
+                </blockquote>
+            </p>
+
+            <h4>4. Justice and Accountability</h4>
+            <p>
+                Islam teaches that every action has consequences. Without belief in an afterlife, the concept of ultimate justice becomes difficult to uphold. Islam assures us that every deed, good or bad, will be accounted for:
+                <blockquote>
+                    "So whoever does an atom's weight of good will see it, and whoever does an atom's weight of evil will see it." - Quran 99:7-8
+                </blockquote>
+            </p>
+
+            <h4>5. The Emotional Fulfillment of Faith</h4>
+            <p>
+                Beyond logic, Islam offers emotional solace. Prayer, remembrance of God, and acts of charity bring immense peace. The Quran reminds us:
+                <blockquote>
+                    "Indeed, in the remembrance of Allah do hearts find rest." - Quran 13:28
+                </blockquote>
+                Islam connects you directly with the Creator, without intermediaries, offering a personal and intimate relationship with God.
+            </p>
+
+            <h4>6. Islam Encourages Questioning and Reflection</h4>
+            <p>
+                Unlike dogmatic systems, Islam encourages questioning and critical thinking. The Quran frequently asks:
+                <blockquote>
+                    "Do they not reflect upon the Quran? Had it been from [any] other than Allah, they would have found within it much contradiction." - Quran 4:82
+                </blockquote>
+                This invitation to reflect and question demonstrates Islam’s confidence in its truth.
+            </p>
+
+            <h4>7. Prophet Muhammad: A Model for Humanity</h4>
+            <p>
+                Prophet Muhammad (peace be upon him) exemplified honesty, compassion, and humility. He was known as "Al-Amin" (the trustworthy) even before his prophethood. His life serves as a practical guide for achieving spiritual and worldly success. He said:
+                <blockquote>
+                    "The strong one is not the one who overcomes others by strength, but the one who controls himself while in anger."
+                </blockquote>
+                His teachings inspire self-discipline, empathy, and resilience.
+            </p>
+
+            <h4>8. Islam’s Harmony with Science</h4>
+            <p>
+                Islam is not in conflict with science; in fact, it encourages the pursuit of knowledge. Many early Muslim scholars laid the foundation for modern science. The Quran also invites us to study nature:
+                <blockquote>
+                    "Indeed, in the creation of the heavens and the earth and the alternation of the night and the day are signs for those of understanding." - Quran 3:190
+                </blockquote>
+                The compatibility between Islam and reason makes it unique among religions.
+            </p>
+
+            <h4>9. Universal Brotherhood and Equality</h4>
+            <p>
+                Islam teaches that all humans are equal in the sight of God, regardless of race, nationality, or status. The Prophet Muhammad (peace be upon him) stated:
+                <blockquote>
+                    "No Arab is superior to a non-Arab, and no non-Arab is superior to an Arab. The best among you are those who are most righteous."
+                </blockquote>
+                This universal message of equality is at the heart of Islam.
+            </p>
+
+            <h4>10. A Final Invitation</h4>
+            <p>
+                If you are genuinely seeking truth, I invite you to study Islam with an open heart and mind. Begin by reading the Quran, asking questions, and reflecting on its message. You don’t have to believe everything immediately—Islam welcomes those who seek understanding gradually.
+            </p>
+            <p>
+                The Quran challenges humanity:
+                <blockquote>
+                    "If you are in doubt about what We have sent down upon Our Servant [Muhammad], then produce a surah the like thereof and call upon your witnesses other than Allah, if you should be truthful." - Quran 2:23
+                </blockquote>
+            </p>
+            <p>
+                Take this as an opportunity to explore the depth, beauty, and wisdom of Islam. The door is always open.
+            </p>
+            <p>
+                Sincerely,<br>
+                <strong>Your Friend</strong>
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>How Islam Addresses Modern Challenges</h2>
+        <p>Islam is not just a religion; it is a way of life that offers guidance on modern challenges:</p>
+        <ul>
+            <li><strong>Environmental Responsibility:</strong> Islam emphasizes stewardship of the earth, promoting sustainability and care for nature.</li>
+            <li><strong>Social Justice:</strong> The principles of Zakat (charity) and fairness ensure a just society.</li>
+            <li><strong>Inner Peace:</strong> Daily prayers and remembrance of Allah help reduce anxiety and promote mental well-being.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Scientific Miracles in the Quran</h2>
+        <div class="card p-4">
+            <p>The Quran mentions phenomena that modern science has only recently discovered. For example, it describes the development of the human embryo in remarkable detail:</p>
+            <blockquote>
+                "We created man from an extract of clay. Then We placed him as a drop in a place of settlement, firmly fixed. Then We made the drop into a clinging clot, and We made the clot into a lump..." - Quran 23:12-14
+            </blockquote>
+            <p>This knowledge, revealed over 1400 years ago, aligns with contemporary embryology, affirming the Quran's divine origin.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Testimonials</h2>
+        <blockquote>
+            <p>"Embracing Islam brought clarity and purpose to my life. It answered the questions I had been struggling with for years." - A Revert</p>
+        </blockquote>
+        <blockquote>
+            <p>"The Quran is not just a book; it's a guide that aligns with both reason and spirituality." - A Truth Seeker</p>
+        </blockquote>
+    </section>
+    <style>
+        /* General Styling for Sections */
+        section {
+            padding: 40px 20px;
+            margin: 20px 0;
+            background-color: #f9f9f9; /* Light gray background for contrast */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+            /* Section Headings */
+            section h2 {
+                color: #2e8b57; /* Deep green for headings */
+                font-size: 2rem; /* Larger font size */
+                text-align: center; /* Centered headings */
+                text-transform: uppercase; /* All uppercase for a formal look */
+                margin-bottom: 20px; /* Space below heading */
+                border-bottom: 3px solid #32cd32; /* Green underline for headings */
+                display: inline-block; /* Inline-block for heading underline */
+                padding-bottom: 10px; /* Space below the heading text */
+            }
+
+            /* Paragraph Styling */
+            section p {
+                font-size: 1.2rem; /* Larger text for better readability */
+                color: #333; /* Dark gray for contrast */
+                line-height: 1.8; /* Comfortable line spacing */
+                margin-bottom: 20px; /* Space below paragraphs */
+            }
+
+            /* Unordered List Styling */
+            section ul {
+                padding-left: 40px; /* Indentation for the list */
+                list-style: disc; /* Default bullet style */
+            }
+
+                section ul li {
+                    font-size: 1.2rem; /* Larger list items */
+                    margin-bottom: 10px; /* Space between items */
+                    line-height: 1.8; /* Comfortable line height */
+                    color: #006400; /* Dark green for list items */
+                }
+
+        /* Card Styling */
+        .card {
+            background-color: white; /* White background for the card */
+            border: none; /* Remove default borders */
+            border-radius: 10px; /* Rounded corners */
+            padding: 20px; /* Padding inside the card */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+        }
+
+            .card:hover {
+                transform: scale(1.05); /* Slightly enlarge on hover */
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+            }
+
+        /* Blockquote Styling */
+        blockquote {
+            font-size: 1.2rem; /* Slightly larger text */
+            font-style: italic; /* Italicized text */
+            color: #555; /* Medium gray color */
+            background-color: #f0f8ff; /* Light blue background */
+            padding: 20px; /* Padding inside the blockquote */
+            border-left: 5px solid #32cd32; /* Green border on the left */
+            margin: 20px 0; /* Space above and below */
+            border-radius: 5px; /* Rounded corners */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            line-height: 1.8; /* Comfortable line height */
+        }
+
+            /* Testimonial Styling */
+            blockquote p {
+                font-size: 1.4rem; /* Larger text for testimonials */
+                text-align: center; /* Centered text */
+                margin: 0; /* Remove default margin */
+            }
+
+            blockquote::before {
+                content: "“"; /* Open quotation mark */
+                font-size: 2rem; /* Larger size for quotes */
+                color: #32cd32; /* Green color for quotes */
+                position: relative;
+                left: -5px;
+            }
+
+            blockquote::after {
+                content: "”"; /* Close quotation mark */
+                font-size: 2rem; /* Larger size for quotes */
+                color: #32cd32; /* Green color for quotes */
+                position: relative;
+                top: 5px;
+            }
+    </style>
+    <section>
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-section">
+            <div class="faq-item">
+                <h4>1. Does Islam allow questioning and reasoning?</h4>
+                <p>Absolutely. Islam encourages seeking knowledge and reflection. The Quran itself invites readers to ponder and use their intellect.</p>
+            </div>
+            <div class="faq-item">
+                <h4>2. How does Islam view other religions?</h4>
+                <p>Islam respects all prophets and scriptures and acknowledges the shared core message of monotheism and righteousness across major faiths.</p>
+            </div>
+            <div class="faq-item">
+                <h4>3. Why does Islam emphasize prayer?</h4>
+                <p>Prayer is a direct connection with God. It nurtures the soul, reminds us of our purpose, and brings peace and discipline into our lives.</p>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* Styling for Convincing Atheists Section */
+        #convincingAtheists {
+            background-color: #f8f9fa;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+            #convincingAtheists h2 {
+                color: #2e8b57;
+                text-transform: uppercase;
+                margin-bottom: 30px;
+                border-bottom: 3px solid #32cd32;
+                display: inline-block;
+            }
+
+            #convincingAtheists h4 {
+                color: #006400;
+                margin-top: 20px;
+            }
+
+            #convincingAtheists p {
+                font-size: 1.2rem;
+                line-height: 1.8;
+                color: #333;
+            }
+
+            #convincingAtheists blockquote {
+                font-style: italic;
+                color: #555;
+                background-color: #f9f9f9;
+                padding: 15px;
+                border-left: 4px solid #2e8b57;
+                margin: 20px 0;
+                border-radius: 8px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            }
+    </style>
+
+    <section>
+        <h2>Quotes from the Quran</h2>
+        <blockquote class="blockquote text-center">
+            <p>"And whoever puts their trust in Allah, then He will suffice them." - Quran 65:3</p>
+        </blockquote>
+        <blockquote class="blockquote text-center">
+            <p>"Indeed, in the creation of the heavens and the earth are signs for those who reflect." - Quran 3:190</p>
+        </blockquote>
+    </section>
+
+    <footer>
+
+        <p>&copy; 2025 Discover Islam. All Rights Reserved.</p>
+    </footer>
+
+
+</body>
+</html>

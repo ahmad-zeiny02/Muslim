@@ -1,0 +1,89 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\ahmad\\source\\repos\\ISlamWeb\\ISlamWeb\\wwwroot\\DoYouKnow.html",
+      "PackagePath": "staticwebassets\\DoYouKnow.html"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\source\\repos\\ISlamWeb\\ISlamWeb\\wwwroot\\Impact.html",
+      "PackagePath": "staticwebassets\\Impact.html"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\source\\repos\\ISlamWeb\\ISlamWeb\\wwwroot\\IslamTimeLine.html",
+      "PackagePath": "staticwebassets\\IslamTimeLine.html"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\source\\repos\\ISlamWeb\\ISlamWeb\\wwwroot\\Philosophical.html",
+      "PackagePath": "staticwebassets\\Philosophical.html"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\source\\repos\\ISlamWeb\\ISlamWeb\\wwwroot\\Pillars.html",
+      "PackagePath": "staticwebassets\\Pillars.html"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\source\\repos\\ISlamWeb\\ISlamWeb\\wwwroot\\PrayerTime.html",
+      "PackagePath": "staticwebassets\\PrayerTime.html"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\source\\repos\\ISlamWeb\\ISlamWeb\\wwwroot\\Real.html",
+      "PackagePath": "staticwebassets\\Real.html"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\source\\repos\\ISlamWeb\\ISlamWeb\\wwwroot\\Reflection.html",
+      "PackagePath": "staticwebassets\\Reflection.html"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\source\\repos\\ISlamWeb\\ISlamWeb\\wwwroot\\Scientific.html",
+      "PackagePath": "staticwebassets\\Scientific.html"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\source\\repos\\ISlamWeb\\ISlamWeb\\wwwroot\\Why.html",
+      "PackagePath": "staticwebassets\\Why.html"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\source\\repos\\ISlamWeb\\ISlamWeb\\wwwroot\\WomenInIslam.html",
+      "PackagePath": "staticwebassets\\WomenInIslam.html"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\source\\repos\\ISlamWeb\\ISlamWeb\\wwwroot\\convince.html",
+      "PackagePath": "staticwebassets\\convince.html"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\source\\repos\\ISlamWeb\\ISlamWeb\\wwwroot\\footer.html",
+      "PackagePath": "staticwebassets\\footer.html"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\source\\repos\\ISlamWeb\\ISlamWeb\\wwwroot\\header.html",
+      "PackagePath": "staticwebassets\\header.html"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\source\\repos\\ISlamWeb\\ISlamWeb\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\source\\repos\\ISlamWeb\\ISlamWeb\\wwwroot\\prophet.html",
+      "PackagePath": "staticwebassets\\prophet.html"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\source\\repos\\ISlamWeb\\ISlamWeb\\wwwroot\\recitation.html",
+      "PackagePath": "staticwebassets\\recitation.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ISlamWeb.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.ISlamWeb.props",
+      "PackagePath": "build\\ISlamWeb.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.ISlamWeb.props",
+      "PackagePath": "buildMultiTargeting\\ISlamWeb.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.ISlamWeb.props",
+      "PackagePath": "buildTransitive\\ISlamWeb.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

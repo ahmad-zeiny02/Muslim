@@ -1,0 +1,357 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karaoke Quran Recitation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        #recitationContainer {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #2e8b57;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #32cd32;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        #quranVerses {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-top: 20px;
+        }
+
+        .verse {
+            padding: 10px;
+            border-left: 3px solid transparent;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+            .verse.active {
+                background-color: #e6ffe6;
+                border-left-color: #2e8b57;
+                font-weight: bold;
+            }
+
+        audio, iframe {
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        #videoSection {
+            margin-top: 40px;
+        }
+
+        .video-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .video-item {
+            width: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+            .video-item iframe {
+                width: 100%;
+            }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container-fluid">
+            <!-- Brand -->
+            <a class="navbar-brand" href="index.html">Discover Islam</a>
+
+            <!-- Hamburger Menu for Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <!-- Home -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <!-- About Islam Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="learnMoreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            About Islam
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="learnMoreDropdown">
+                            <li><a class="dropdown-item" href="Pillars.html">Islamic Pillars</a></li>
+                            <li><a class="dropdown-item" href="WomenInIslam.html">Women in Islam</a></li>
+                            <li><a class="dropdown-item" href="recitation.html">Recitations</a></li>
+                            <li><a class="dropdown-item" href="DoYouKnow.html">Did You Know</a></li>
+                            <li><a class="dropdown-item" href="PrayerTime.html">Prayer Times</a></li>
+                            <li><a class="dropdown-item" href="IslamTimeLine.html">Islamic Timeline</a></li>
+                          
+                        </ul>
+                    </li>
+
+                    <!-- The Atheism Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="convinceDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            The Atheism
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="convinceDropdown">
+                            <li><a class="dropdown-item" href="convince.html">Evidence of God's existence  </a></li>
+                            <li><a class="dropdown-item" href="Scientific.html">Scientific Evidence</a></li>
+                            <li><a class="dropdown-item" href="Philosophical.html">Philosophical Reflections</a></li>
+                            <li><a class="dropdown-item" href="Real.html">Real-Life Stories</a></li>
+                            <li><a class="dropdown-item" href="Reflection.html">A Call to Reflection</a></li>
+                            <li><a class="dropdown-item" href="Impact.html">Impact of Belief</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <style>
+        /* Navbar Styling */
+        .navbar {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .nav-link {
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+            .nav-link:hover,
+            .nav-link.active {
+                background-color: #28a745; /* Lighter green for hover effect */
+                color: #fff !important;
+                border-radius: 5px;
+            }
+
+        /* Dropdown Menu Styling */
+        .dropdown-menu {
+            background-color: #28a745; /* Match navbar green */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .dropdown-item {
+            font-size: 1rem;
+            padding: 12px 20px;
+            transition: all 0.3s ease-in-out;
+            white-space: nowrap;
+        }
+
+            .dropdown-item:hover {
+                background-color: #218838; /* Slightly darker green */
+                color: #fff;
+                border-radius: 5px;
+            }
+
+        /* Adjust Dropdown Placement */
+        .navbar .dropdown-menu {
+            left: auto; /* Ensure proper alignment */
+            right: 0; /* Align to the right edge of the button */
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .dropdown-menu {
+                min-width: 100%; /* Ensure full width on smaller screens */
+                padding: 10px 0;
+            }
+
+            .dropdown-item {
+                font-size: 1rem;
+                padding: 15px 20px; /* More padding for touch devices */
+            }
+        }
+    </style>
+
+    <div id="recitationContainer" class="container">
+        <h2>Karaoke Quran Recitation</h2>
+        <audio id="quranAudio" controls>
+            <source src="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/001.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <div id="quranVerses">
+            <p class="verse" data-start="0" data-end="5">1. In the name of Allah, the Most Gracious, the Most Merciful.</p>
+            <p class="verse" data-start="5" data-end="10">2. Praise be to Allah, Lord of the Worlds.</p>
+            <p class="verse" data-start="10" data-end="15">3. The Most Gracious, the Most Merciful.</p>
+            <p class="verse" data-start="15" data-end="20">4. Master of the Day of Judgment.</p>
+            <p class="verse" data-start="20" data-end="25">5. You alone we worship, and You alone we ask for help.</p>
+            <p class="verse" data-start="25" data-end="30">6. Guide us on the Straight Path,</p>
+            <p class="verse" data-start="30" data-end="35">7. The path of those who have earned Your favor,</p>
+            <p class="verse" data-start="35" data-end="40">8. Not of those who have gone astray.</p>
+        </div>
+    </div>
+    <div id="videoSection" class="container my-5">
+        <h2 class="text-center mb-5">Quran Recitation Videos</h2>
+        <div class="row g-4 justify-content-center">
+            <!-- Video Item 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card shadow-sm border-0">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/T4ZeE0Aw3Zg?si=L6FyZ1QYVeQiYsye"
+                                title="Beautiful Quran Recitation"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Surah Al-Mu'minun </h5>
+                        <p class="card-text">Beautiful Quran Recitation,A serene recitation of the Holy Quran to soothe your soul.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Item 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card shadow-sm border-0">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/F2GVtzJwAA8?si=WbthD56I8hZzKMcV"
+                                title="Surah Al-Fatiha Recitation"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Surat Al-Hadid </h5>
+                        <p class="card-text">Surat Al-Hadid (The Iron Novel of Al-Douri) from Al-Kisa'i | Sheikh Mishari Rashid Al-Afasy | Surah Al-Hadid Mishary Alafasy</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Item 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card shadow-sm border-0">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/FbOfvk2JTj4?si=uFkctMRXLYXDsQwo"
+                                title="Surah Al-Baqarah Recitation"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title"> Surat Al-Dhariyat</h5>
+                        <p class="card-text">Humbled recitation with the melodious voice Sheikh Saud Al-Shuraim Surat Al-Dhariyat with interpretation quiet dawn</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        #videoSection h2 {
+            color: #2e8b57;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 3px solid #32cd32;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .card:hover {
+                transform: scale(1.05);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            }
+
+        .card-title {
+            font-size: 1.2rem;
+            color: #006400;
+            margin-top: 10px;
+        }
+
+        .card-text {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .ratio {
+            border-radius: 10px 10px 0 0;
+            overflow: hidden;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<footer>
+
+    <p>&copy; 2025 Discover Islam. All Rights Reserved.</p>
+    <p>"May Allah guide you to the straight path."</p>
+</footer>
+<style>
+    footer {
+        background: linear-gradient(to right, #3cb043, #005f00);
+        color: white;
+        padding: 30px 0;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+        footer a {
+            color: #fff;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+            footer a:hover {
+                color: #32cd32;
+                text-decoration: none;
+            }
+</style>
+
+
+</html>

@@ -1,0 +1,617 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Five Pillars of Islam</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #2e8b57;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .pillar-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .pillar-card:hover {
+                transform: scale(1.05);
+                box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+            }
+
+        .pillar-icon {
+            font-size: 3rem;
+            color: #2e8b57;
+            margin-bottom: 10px;
+        }
+
+        #quizSection button {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <style>
+        #audioRecitations {
+            background: linear-gradient(to bottom right, #f0f8ff, #e6ffe6);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+            #audioRecitations h2 {
+                font-size: 2rem;
+                color: #2e8b57;
+                margin-bottom: 15px;
+                text-transform: uppercase;
+                border-bottom: 3px solid #32cd32;
+                display: inline-block;
+            }
+
+            #audioRecitations p {
+                font-size: 1.2rem;
+                color: #333;
+                margin-bottom: 20px;
+            }
+
+        #recitationDropdown {
+            padding: 10px;
+            font-size: 1.1rem;
+            border: 2px solid #32cd32;
+            border-radius: 5px;
+            margin-top: 10px;
+            background-color: #f9f9f9;
+            color: #006400;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+            #recitationDropdown:focus {
+                outline: none;
+                border-color: #2e8b57;
+                box-shadow: 0 0 5px rgba(46, 139, 87, 0.5);
+            }
+
+        #recitationAudio {
+            width: 100%;
+            max-width: 500px;
+            margin-top: 20px;
+            border: 2px solid #32cd32;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+
+    <style>
+        /* Global Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Navbar Styling */
+        nav {
+            background-color: #2e8b57;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+            nav .nav-link {
+                color: #fff !important;
+                font-weight: bold;
+            }
+
+                nav .nav-link:hover {
+                    color: #ffd700 !important;
+                }
+
+        /* "Did You Know?" Section */
+        #didYouKnow {
+            background: linear-gradient(to bottom right, #e6ffe6, #f0f8ff);
+            padding: 60px 20px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            position: relative;
+        }
+
+            #didYouKnow h2 {
+                font-size: 2.5rem;
+                color: #006400;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+                border-bottom: 4px solid #32cd32;
+                display: inline-block;
+            }
+
+        .fact {
+            margin: 20px 0;
+            font-size: 1.3rem;
+            color: #555;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-left: 4px solid #32cd32;
+            text-align: left;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+            .fact i {
+                color: #32cd32;
+                margin-right: 10px;
+            }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Interactive Buttons */
+        .btn-fact {
+            margin: 20px 5px;
+            padding: 10px 15px;
+            background-color: #006400;
+            color: white;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+            .btn-fact:hover {
+                background-color: #32cd32;
+                transform: scale(1.1);
+            }
+
+        /* Scroll-to-Top Button */
+        #scrollToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #32cd32;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+            #scrollToTop:hover {
+                background-color: #006400;
+                transform: scale(1.2);
+            }
+    </style>
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Your other content -->
+    <!-- Required JavaScript for Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  
+    <style>
+        /* Navbar Styling */
+        .navbar {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .nav-link {
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+            .nav-link:hover,
+            .nav-link.active {
+                background-color: #28a745; /* Lighter green for hover effect */
+                color: #fff !important;
+                border-radius: 5px;
+            }
+
+        /* Dropdown Menu Styling */
+        .dropdown-menu {
+            background-color: #28a745; /* Match navbar green */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .dropdown-item {
+            font-size: 1rem;
+            padding: 12px 20px;
+            transition: all 0.3s ease-in-out;
+            white-space: nowrap;
+        }
+
+            .dropdown-item:hover {
+                background-color: #218838; /* Slightly darker green */
+                color: #fff;
+                border-radius: 5px;
+            }
+
+        /* Adjust Dropdown Placement */
+        .navbar .dropdown-menu {
+            left: auto; /* Ensure proper alignment */
+            right: 0; /* Align to the right edge of the button */
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .dropdown-menu {
+                min-width: 100%; /* Ensure full width on smaller screens */
+                padding: 10px 0;
+            }
+
+            .dropdown-item {
+                font-size: 1rem;
+                padding: 15px 20px; /* More padding for touch devices */
+            }
+        }
+    </style>
+
+    <!-- Placeholder for Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="hero text-center py-5 bg-light">
+        <h1>Five Pillars of Islam</h1>
+        <p>Foundations of Islamic Faith and Practice</p>
+    </section>
+
+    <!-- Pillars Section -->
+    <section id="pillarsSection" class="container my-5">
+        <h2>The Five Pillars of Islam</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="pillar-card">
+                    <div class="pillar-icon">🕌</div>
+                    <h3>Shahada</h3>
+                    <p>Faith: Declaring there is no god but Allah, and Muhammad is His messenger.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="pillar-card">
+                    <div class="pillar-icon">🙏</div>
+                    <h3>Salah</h3>
+                    <p>Prayer: Performing five daily prayers to connect with Allah.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="pillar-card">
+                    <div class="pillar-icon">🤲</div>
+                    <h3>Zakat</h3>
+                    <p>Charity: Giving to those in need to purify wealth and heart.</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="pillar-card">
+                    <div class="pillar-icon">🌙</div>
+                    <h3>Sawm</h3>
+                    <p>Fasting: Observing fast during the holy month of Ramadan.</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="pillar-card">
+                    <div class="pillar-icon">🕋</div>
+                    <h3>Hajj</h3>
+                    <p>Pilgrimage: Visiting the holy sites in Mecca at least once in a lifetime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="quizSection" class="container my-5">
+        <h2>Test Your Knowledge</h2>
+
+        <!-- First Question -->
+        <div class="mb-4">
+            <p><strong>Q1:</strong> Which of the following is the first pillar of Islam?</p>
+            <button onclick="checkAnswer(this, 'Shahada', 'quizResult1')" class="btn btn-primary">Shahada</button>
+            <button onclick="checkAnswer(this, 'Salah', 'quizResult1')" class="btn btn-primary">Salah</button>
+            <button onclick="checkAnswer(this, 'Zakat', 'quizResult1')" class="btn btn-primary">Zakat</button>
+            <p id="quizResult1" class="mt-2"></p>
+        </div>
+
+        <!-- Second Question -->
+        <div class="mb-4">
+            <p><strong>Q2:</strong> How many times a day are Muslims required to pray?</p>
+            <button onclick="checkAnswer(this, 'Five', 'quizResult2')" class="btn btn-primary">Five</button>
+            <button onclick="checkAnswer(this, 'Three', 'quizResult2')" class="btn btn-primary">Three</button>
+            <button onclick="checkAnswer(this, 'Seven', 'quizResult2')" class="btn btn-primary">Seven</button>
+            <p id="quizResult2" class="mt-2"></p>
+        </div>
+
+        <!-- Third Question -->
+        <div class="mb-4">
+            <p><strong>Q3:</strong> What is the holy month of fasting called?</p>
+            <button onclick="checkAnswer(this, 'Ramadan', 'quizResult3')" class="btn btn-primary">Ramadan</button>
+            <button onclick="checkAnswer(this, 'Hajj', 'quizResult3')" class="btn btn-primary">Hajj</button>
+            <button onclick="checkAnswer(this, 'Eid', 'quizResult3')" class="btn btn-primary">Eid</button>
+            <p id="quizResult3" class="mt-2"></p>
+        </div>
+
+        <!-- Fourth Question -->
+        <div class="mb-4">
+            <p><strong>Q4:</strong> Which pillar involves giving charity to those in need?</p>
+            <button onclick="checkAnswer(this, 'Zakat', 'quizResult4')" class="btn btn-primary">Zakat</button>
+            <button onclick="checkAnswer(this, 'Sawm', 'quizResult4')" class="btn btn-primary">Sawm</button>
+            <button onclick="checkAnswer(this, 'Hajj', 'quizResult4')" class="btn btn-primary">Hajj</button>
+            <p id="quizResult4" class="mt-2"></p>
+        </div>
+
+        <!-- Fifth Question -->
+        <div class="mb-4">
+            <p><strong>Q5:</strong> What is the pilgrimage to Mecca called?</p>
+            <button onclick="checkAnswer(this, 'Hajj', 'quizResult5')" class="btn btn-primary">Hajj</button>
+            <button onclick="checkAnswer(this, 'Umrah', 'quizResult5')" class="btn btn-primary">Umrah</button>
+            <button onclick="checkAnswer(this, 'Zakat', 'quizResult5')" class="btn btn-primary">Zakat</button>
+            <p id="quizResult5" class="mt-2"></p>
+        </div>
+    </section>
+
+    <script>
+        // Function to handle quiz answers
+        function checkAnswer(button, answer, resultId) {
+            const correctAnswers = {
+                quizResult1: "Shahada",
+                quizResult2: "Five",
+                quizResult3: "Ramadan",
+                quizResult4: "Zakat",
+                quizResult5: "Hajj"
+            };
+
+            const result = document.getElementById(resultId);
+            if (answer === correctAnswers[resultId]) {
+                result.textContent = "Correct!";
+                result.style.color = "green";
+            } else {
+                result.textContent = `Incorrect. The correct answer is ${correctAnswers[resultId]}.`;
+                result.style.color = "red";
+            }
+        }
+    </script>
+
+    <!-- jQuery Script to Load Header and Footer -->
+    <script>
+        $(function () {
+            $("#header-placeholder").load("header.html", function (response, status, xhr) {
+                if (status === "error") {
+                    console.error("Error loading header:", xhr.status, xhr.statusText);
+                }
+            });
+            $("#footer-placeholder").load("footer.html", function (response, status, xhr) {
+                if (status === "error") {
+                    console.error("Error loading footer:", xhr.status, xhr.statusText);
+                }
+            });
+        });
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+<style>
+    /* Footer Styling */
+    .footer {
+        background: linear-gradient(to right, #3cb043, #005f00);
+        color: white;
+        font-size: 1rem;
+        box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+        .footer p {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+    .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 10px 0;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+        .footer-links li {
+            display: inline;
+        }
+
+        .footer-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+            .footer-links a:hover {
+                color: #32cd32;
+            }
+
+    .social-icons a {
+        font-size: 1.5rem;
+        color: white;
+        margin: 0 10px;
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+        .social-icons a:hover {
+            color: #32cd32;
+            transform: scale(1.2);
+        }
+    /* General Navbar Styling */
+    /* Navbar Dropdown Styling */
+    /* Navbar Dropdown Styling */
+    .navbar {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        background-color: #28a745; /* Green background */
+    }
+
+    .nav-link {
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+    }
+
+        .nav-link:hover,
+        .nav-link.active {
+            background-color: #218838; /* Slightly darker green */
+            color: #fff !important;
+            border-radius: 5px;
+        }
+
+    /* Dropdown Menu Styling */
+    .dropdown-menu {
+        background-color: #28a745; /* Match navbar green */
+        border-radius: 8px; /* Smooth edges */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+        margin-top: 5px; /* Proper spacing below dropdown toggle */
+        min-width: 200px; /* Ensure enough space for long words */
+        padding: 5px 0;
+        overflow: hidden; /* Prevent overflow issues */
+    }
+
+    /* Dropdown Item Styling */
+    .dropdown-item {
+        font-size: 1rem;
+        color: #fff;
+        padding: 12px 20px; /* Add more padding for better readability */
+        white-space: nowrap; /* Prevent text wrapping */
+        transition: all 0.3s ease-in-out;
+    }
+
+        .dropdown-item:hover {
+            background-color: #218838; /* Slightly darker green */
+            color: #fff;
+            border-radius: 5px; /* Smooth hover effect */
+        }
+
+    /* Dropdown Menu Placement Fix */
+    .navbar .dropdown-menu {
+        left: auto;
+        right: 0; /* Align to the right edge of the button */
+    }
+
+    /* Mobile-Friendly Adjustments */
+    @media (max-width: 768px) {
+        .dropdown-menu {
+            min-width: 100%; /* Full-width dropdown on mobile */
+            padding: 10px 0;
+        }
+
+        .dropdown-item {
+            padding: 15px 20px; /* More padding for touch devices */
+        }
+    }
+
+
+    /* Footer Styling */
+    footer {
+        background: linear-gradient(to right, #3cb043, #005f00);
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 20px;
+        box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: underline;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+            footer a:hover {
+                color: #32cd32; /* Lighter green */
+                text-decoration: none;
+            }
+
+   
+
+</style>
+
+<footer class="footer text-center py-4">
+    <div class="container">
+        <p>&copy; 2025 Discover Islam. All Rights Reserved.</p>
+        <p>"May Allah guide you to the straight path."</p>
+        <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Why.html">Why Islam</a></li>
+
+        </ul>
+    </div>
+</footer>
+
+</html>

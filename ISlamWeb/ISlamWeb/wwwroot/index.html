@@ -1,0 +1,874 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Islam</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff; /* Light blue background */
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* General Container Styling */
+        .container {
+            padding: 20px;
+        }
+
+        /* Header Styling */
+        header {
+            background: linear-gradient(to right, #005f00, #3cb043);
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+            header nav a {
+                color: white;
+                text-decoration: none;
+                padding: 10px 20px;
+                font-size: 1.2rem;
+                font-weight: bold;
+                transition: background-color 0.3s, color 0.3s;
+            }
+
+                header nav a:hover {
+                    background-color: #3cb043;
+                    color: #fffaf0;
+                    border-radius: 5px;
+                }
+
+        .hero {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://www.alsharqtoday.com/wp-content/uploads/2021/02/%D8%A7%D9%84%D8%A7%D8%B3%D9%84%D8%A7%D9%85.jpg') no-repeat center center/cover;
+            background-position: center top;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+
+            .hero::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: -1;
+            }
+
+            .hero h1 {
+                font-size: 4rem;
+                margin-bottom: 10px;
+                animation: fadeIn 2s ease;
+            }
+
+            .hero p {
+                font-size: 1.5rem;
+                font-style: italic;
+            }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            background: #32cd32;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+            button:hover {
+                background: transparent;
+                color: #32cd32;
+                border-color: #32cd32;
+                box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+            }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #006400;
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            border-bottom: 3px solid #32cd32;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        footer {
+            background: linear-gradient(to right, #3cb043, #005f00);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+            footer a {
+                color: #fff;
+                text-decoration: underline;
+                font-weight: bold;
+            }
+
+                footer a:hover {
+                    color: #32cd32;
+                    text-decoration: none;
+                }
+
+        .image-gallery {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.4s, box-shadow 0.4s;
+        }
+
+            .image-gallery:hover {
+                transform: scale(1.1);
+                box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+            }
+
+        /* Quiz Section */
+        #quizSection button {
+            display: inline-block;
+            margin: 10px 5px;
+            background: linear-gradient(to right, #32cd32, #006400);
+            border: 2px solid #004d00;
+        }
+
+        /* Carousel */
+        .carousel-inner blockquote {
+            font-size: 1.4rem;
+            font-style: italic;
+            margin: 0 auto;
+            color: #333;
+            max-width: 600px;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            .hero {
+                height: 300px;
+            }
+
+                .hero h1 {
+                    font-size: 2.5rem;
+                }
+
+                .hero p {
+                    font-size: 1.2rem;
+                }
+        }
+
+        .blockquote-footer {
+            color: black; /* Dark green */
+            font-style: italic;
+            font-weight: bold;
+        }
+        /* Navbar Styling */
+        .navbar {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .nav-link {
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+            .nav-link:hover, .nav-link.active {
+                background-color: #28a745; /* Lighter green */
+                color: #fff !important;
+                border-radius: 5px;
+            }
+
+        /* Dropdown Menu Styling */
+        .dropdown-menu {
+            background-color: #28a745;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .dropdown-item {
+            font-size: 1rem;
+            padding: 10px 15px;
+            transition: all 0.3s ease;
+        }
+
+            .dropdown-item:hover {
+                background-color: #28a745;
+                color: #fff !important;
+                border-radius: 5px;
+            }
+        /* Dropdown Menu Enhancements */
+        .dropdown-menu {
+            background-color: #28a745; /* Match navbar green */
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            min-width: 250px; /* Increased width to fit text */
+            padding: 10px 0;
+        }
+
+        /* Dropdown Item Styling */
+        .dropdown-item {
+            font-size: 1rem;
+            color: #fff;
+            padding: 12px 20px; /* Increased padding for better spacing */
+            transition: all 0.3s ease-in-out;
+            white-space: nowrap; /* Prevent wrapping */
+        }
+
+            /* On Hover */
+            .dropdown-item:hover {
+                background-color: #218838; /* Slightly darker green */
+                color: #fff;
+                border-radius: 5px;
+            }
+
+        /* Adjust Dropdown Placement */
+        .navbar .dropdown-menu {
+            left: auto; /* Ensure proper alignment */
+            right: 0; /* Align to the right edge of the button */
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .dropdown-menu {
+                min-width: 100%; /* Ensure full width on smaller screens */
+                padding: 10px 0;
+            }
+
+            .dropdown-item {
+                font-size: 1rem;
+                padding: 15px 20px; /* More padding for touch devices */
+            }
+        }
+
+    </style>
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container-fluid">
+        <!-- Brand -->
+        <a class="navbar-brand" href="index.html">Discover Islam</a>
+
+        <!-- Hamburger Menu for Mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <!-- Home -->
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Why.html">A Message For You  </a>
+                </li>
+
+                <!-- About Islam Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="learnMoreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        About Islam
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="learnMoreDropdown">
+                        <li><a class="dropdown-item" href="Pillars.html">Islamic Pillars</a></li>
+                        <li><a class="dropdown-item" href="WomenInIslam.html">Women in Islam</a></li>
+                        <li><a class="dropdown-item" href="recitation.html">Recitations</a></li>
+                        <li><a class="dropdown-item" href="DoYouKnow.html">Did You Know</a></li>
+                        <li><a class="dropdown-item" href="PrayerTime.html">Prayer Times</a></li>
+                        <li><a class="dropdown-item" href="IslamTimeLine.html">Islamic Timeline</a></li>
+                        <li><a class="dropdown-item" href="#" id="openModal">Quotes</a></li>
+                    </ul>
+                </li>
+
+                <!-- The Atheism Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="convinceDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        The Atheism
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="convinceDropdown">
+                        <li><a class="dropdown-item" href="convince.html">Evidence of God's existence  </a></li>
+                        <li><a class="dropdown-item" href="Scientific.html">Scientific Evidence</a></li>
+                        <li><a class="dropdown-item" href="Philosophical.html">Philosophical Reflections</a></li>
+                        <li><a class="dropdown-item" href="Real.html">Real-Life Stories</a></li>
+                        <li><a class="dropdown-item" href="Reflection.html">A Call to Reflection</a></li>
+                        <li><a class="dropdown-item" href="Impact.html">Impact of Belief</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<body>
+
+    <section class="hero">
+        <div>
+            <h1>"Indeed, in the remembrance of Allah do hearts find rest."</h1>
+            <p class="mt-3">- Quran 13:28</p>
+        </div>
+    </section>
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Beauty of Islam in Pictures</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="https://th.bing.com/th/id/OIP.eOEBAurIWFF7HDGgVfAF8AHaFu?rs=1&pid=ImgDetMain" alt="Kaaba" class="image-gallery">
+                <p class="text-center">The Kaaba: Center of Unity in Islam</p>
+            </div>
+            <div class="col-md-4">
+                <img src="https://th.bing.com/th/id/OIP.iDOKrnkokpvgOM0t6VjrWwHaE7?rs=1&pid=ImgDetMain" alt="Quran" class="image-gallery">
+                <p class="text-center">The Holy Quran: Guidance for Humanity</p>
+            </div>
+            <div class="col-md-4">
+                <img src="https://th.bing.com/th/id/OIP.u1KE-dujcqnk6Z8gRYfykAHaE7?pid=ImgDet&w=184&h=122&c=7&dpr=1,3" alt="Mosque" class="image-gallery">
+                <p class="text-center">Mosques: Places of Worship and Community</p>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .image-gallery {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    </style>
+    <main class="container my-5">
+        <section>
+            <h2 class="text-center mb-4">Welcome to Islam</h2>
+            <p>
+                Islam is a universal message of peace, compassion, and purpose. It invites every human being to recognize their Creator, Allah, and to find a life of fulfillment and tranquility through submission to His will. At its core, Islam teaches that there is only one God, Allah, who is merciful, just, and all-knowing.
+            </p>
+            <p>
+                Every prayer you make, every tear you shed, and every hope you hold is known and cherished by Allah. This direct connection offers unparalleled peace and reassurance, as Allah Himself promises in the Quran: <strong>"Call upon Me; I will respond to you” (Quran 40:60).</strong>
+            </p>
+            <p>
+                The Quran, the holy book of Islam, is a miracle of divine wisdom. Revealed over 1400 years ago, it provides guidance that remains relevant today, addressing spiritual, ethical, social, and even scientific matters with precision and foresight. From encouraging acts of kindness and charity to detailing the importance of family and justice, the Quran is a comprehensive guide for humanity.
+            </p>
+            <p>
+                Islam answers life’s deepest questions with clarity. Why are we here? To worship Allah and strive for righteousness. What is our purpose? To live a life of good deeds, kindness, and justice, so we may earn eternal peace in Paradise. This life is a test, and Islam equips us with the tools to succeed in this world and the next. It is a religion that values action: prayer to nourish the soul, fasting to instill discipline, charity to uplift society, and justice to maintain balance.
+            </p>
+            <p>
+                Prophet Muhammad (peace be upon him), the final messenger of Allah, is a perfect example of human virtue. His life was a testament to mercy, honesty, and compassion. He said: <strong>“The best of people are those who bring the greatest benefit to others.”</strong> His teachings inspire millions to live with purpose, treat others with dignity, and strive for self-improvement.
+            </p>
+            <p>
+                Islam is for everyone—regardless of race, nationality, or social status. It unites people under one identity: that of being a servant of Allah. In the Quran, Allah says: <strong>"O mankind, indeed We have created you from male and female and made you peoples and tribes that you may know one another. Indeed, the most noble of you in the sight of Allah is the most righteous of you” (Quran 49:13).</strong>
+            </p>
+            <p>
+                Moreover, Islam brings inner peace. In a world filled with distractions, pressures, and uncertainties, Islam offers a sanctuary for the heart. The Quran reassures us: <strong>"Indeed, in the remembrance of Allah do hearts find rest” (Quran 13:28).</strong>
+            </p>
+            <p>
+                Finally, Islam promises ultimate success—eternal Paradise for those who believe and do good. Imagine a life where every action, no matter how small, is rewarded by Allah. Prophet Muhammad (peace be upon him) said: <strong>“Allah is kind and loves kindness in all matters.”</strong> By joining Islam, you are embarking on a journey of faith, kindness, and reward, leading to everlasting peace in the Hereafter.
+            </p>
+        </section>
+    </main>
+    <section class="container my-5" id="reflection">
+        <h2 class="text-center mb-4">Reflektioner om Islam</h2>
+        <div class="card p-4 shadow-lg">
+            <p class="mb-4">Kära vän,</p>
+            <p>
+                Jag ville dela några tankar med dig om min tro inom islam, inte för att ifrågasätta någon annans övertygelse, utan för att ge dig en inblick i vad islam säger om Gud och livet. Jag vet att vi delar många värderingar och principer, och jag tror att dessa tankar kan vara intressanta för dig...
+            </p>
+            <button id="readMoreBtn" class="btn btn-primary">Read More</button>
+        </div>
+    </section>
+    <script>
+        document.getElementById("readMoreBtn").addEventListener("click", function () {
+            window.location.href = "Why.html";
+        });
+    </script>
+
+    <style>
+        #audioRecitations {
+            background: linear-gradient(to bottom right, #f0f8ff, #e6ffe6);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+            #audioRecitations h2 {
+                font-size: 2rem;
+                color: #2e8b57;
+                margin-bottom: 15px;
+                text-transform: uppercase;
+                border-bottom: 3px solid #32cd32;
+                display: inline-block;
+            }
+
+            #audioRecitations p {
+                font-size: 1.2rem;
+                color: #333;
+                margin-bottom: 20px;
+            }
+
+        #recitationDropdown {
+            padding: 10px;
+            font-size: 1.1rem;
+            border: 2px solid #32cd32;
+            border-radius: 5px;
+            margin-top: 10px;
+            background-color: #f9f9f9;
+            color: #006400;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+            #recitationDropdown:focus {
+                outline: none;
+                border-color: #2e8b57;
+                box-shadow: 0 0 5px rgba(46, 139, 87, 0.5);
+            }
+
+        #recitationAudio {
+            width: 100%;
+            max-width: 500px;
+            margin-top: 20px;
+            border: 2px solid #32cd32;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+
+    <section id="audioRecitations" class="container my-5">
+        <h2>Listen to Quran Recitations</h2>
+        <p>Surah Al-Fatiha:</p>
+        <select id="recitationDropdown">
+            <option value="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/001.mp3">Surah Al-Fatiha</option>
+            <option value="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/002.mp3">Surah Al-Baqarah (Ayat 1-5)</option>
+            <option value="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/003.mp3">Surah Aal-E-Imran (Ayat 1-5)</option>
+        </select>
+        <audio id="recitationAudio" controls>
+            <source src="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/001.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+
+    <script>
+        document.getElementById('recitationDropdown').addEventListener('change', function () {
+            const audioPlayer = document.getElementById('recitationAudio');
+            audioPlayer.src = this.value;
+            console.log('Audio Source Changed To:', this.value);
+            audioPlayer.play();
+        });
+        const audioPlayer = document.getElementById('recitationAudio');
+        audioPlayer.addEventListener('waiting', () => {
+            console.log('Audio is loading...');
+        });
+        audioPlayer.addEventListener('canplay', () => {
+            console.log('Audio is ready to play.');
+        });
+    </script>
+    <section id="quizSection" class="container my-5">
+        <h2 class="text-center mb-4">Islamic Quiz</h2>
+        <div class="mb-5">
+            <p>Q1: What is the holy book of Islam?</p>
+            <button onclick="checkAnswer('A', 'quizResult1')">A) Quran</button>
+            <button onclick="checkAnswer('B', 'quizResult1')">B) Bible</button>
+            <button onclick="checkAnswer('C', 'quizResult1')">C) Torah</button>
+            <p id="quizResult1" class="mt-3"></p>
+        </div>
+        <div class="mb-5">
+            <p>Q2: Who is considered the last prophet in Islam?</p>
+            <button onclick="checkAnswer('A', 'quizResult2')">A) Moses</button>
+            <button onclick="checkAnswer('B', 'quizResult2')">B) Muhammad (PBUH)</button>
+            <button onclick="checkAnswer('C', 'quizResult2')">C) Jesus</button>
+            <p id="quizResult2" class="mt-3"></p>
+        </div>
+        <div>
+            <p>Q3: How many times do Muslims pray each day?</p>
+            <button onclick="checkAnswer('A', 'quizResult3')">A) Three</button>
+            <button onclick="checkAnswer('B', 'quizResult3')">B) Five</button>
+            <button onclick="checkAnswer('C', 'quizResult3')">C) Seven</button>
+            <p id="quizResult3" class="mt-3"></p>
+        </div>
+    </section>
+
+    <script>
+        function checkAnswer(answer, resultId) {
+            const result = document.getElementById(resultId);
+
+            const correctAnswers = {
+                quizResult1: 'A', // Quran
+                quizResult2: 'B', // Muhammad (PBUH)
+                quizResult3: 'B'  // Five prayers
+            };
+            if (answer === correctAnswers[resultId]) {
+                result.textContent = "Correct!";
+                result.style.color = "green";
+            } else {
+                const correctAnswerText = {
+                    quizResult1: "A) Quran",
+                    quizResult2: "B) Muhammad (PBUH)",
+                    quizResult3: "B) Five"
+                };
+                result.textContent = `Incorrect. The correct answer is ${correctAnswerText[resultId]}.`;
+                result.style.color = "red";
+            }
+        }
+    </script>
+    <section id="facts" class="container my-5">
+        <h2 class="text-center mb-4">Interesting Facts About Islam</h2>
+        <div class="row">
+            <div class="col-md-4 text-center mb-4">
+                <div class="fact-box p-4">
+                    <i class="bi bi-book-half" style="font-size: 3rem; color: #2e8b57;"></i>
+                    <h4 class="mt-3">The Quran</h4>
+                    <p>The Quran is the holy book of Islam and has remained unchanged for over 1400 years.</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <div class="fact-box p-4">
+                    <i class="bi bi-globe" style="font-size: 3rem; color: #2e8b57;"></i>
+                    <h4 class="mt-3">Global Religion</h4>
+                    <p>Islam is the second-largest religion in the world, with over 1.9 billion followers.</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <div class="fact-box p-4">
+                    <i class="bi bi-calendar-check" style="font-size: 3rem; color: #2e8b57;"></i>
+                    <h4 class="mt-3">Daily Prayers</h4>
+                    <p>Muslims pray five times a day to maintain a connection with Allah.</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <div class="fact-box p-4">
+                    <i class="bi bi-person-circle" style="font-size: 3rem; color: #2e8b57;"></i>
+                    <h4 class="mt-3">Equality</h4>
+                    <p>Islam teaches that all humans are equal in the eyes of Allah, regardless of race or status.</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <div class="fact-box p-4">
+                    <i class="bi bi-tree" style="font-size: 3rem; color: #2e8b57;"></i>
+                    <h4 class="mt-3">Charity</h4>
+                    <p>Charity (Zakat) is one of the Five Pillars of Islam, encouraging Muslims to support those in need.</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <div class="fact-box p-4">
+                    <i class="bi bi-calendar-event" style="font-size: 3rem; color: #2e8b57;"></i>
+                    <h4 class="mt-3">Ramadan</h4>
+                    <p>Ramadan is the holy month of fasting, reflection, and devotion in Islam.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        #facts {
+            background-color: #f8f9fa;
+            padding: 40px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+            #facts h2 {
+                font-size: 2.5rem;
+                color: #2e8b57;
+                margin-bottom: 30px;
+                text-transform: uppercase;
+                border-bottom: 2px solid #32cd32;
+                display: inline-block;
+            }
+
+        .fact-box {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .fact-box:hover {
+                transform: scale(1.05);
+                box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+            }
+
+            .fact-box h4 {
+                color: #2e8b57;
+                margin-top: 15px;
+                font-size: 1.5rem;
+            }
+
+            .fact-box p {
+                font-size: 1rem;
+                color: #555;
+                margin-top: 10px;
+            }
+
+        .bi {
+            margin-bottom: 10px;
+        }
+    </style>
+    <section id="whyIslam" class="container my-5">
+        <h2 class="text-center mb-4">Why Choose Islam?</h2>
+        <div class="row">
+            <div class="col-md-4 text-center mb-4">
+                <div class="reason-box p-4 shadow-lg rounded">
+                    <i class="bi bi-book" style="font-size: 3rem; color: #2e8b57;"></i>
+                    <h4 class="mt-3">Universal Message</h4>
+                    <p>
+                        Islam teaches equality, compassion, and justice. It offers a universal message for all humanity regardless of race, nationality, or social status.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <div class="reason-box p-4 shadow-lg rounded">
+                    <i class="bi bi-people" style="font-size: 3rem; color: #2e8b57;"></i>
+                    <h4 class="mt-3">Community and Belonging</h4>
+                    <p>
+                        Islam builds strong communities by fostering unity, brotherhood, and shared values that transcend borders and cultures.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <div class="reason-box p-4 shadow-lg rounded">
+                    <i class="bi bi-stars" style="font-size: 3rem; color: #2e8b57;"></i>
+                    <h4 class="mt-3">Spiritual Fulfillment</h4>
+                    <p>
+                        Through prayer, fasting, and remembrance of Allah, Islam provides inner peace, purpose, and hope for the Hereafter.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+        #whyIslam {
+            background-color: #f8f9fa;
+            padding: 40px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+            #whyIslam h2 {
+                font-size: 2.5rem;
+                color: #2e8b57;
+                margin-bottom: 30px;
+                text-transform: uppercase;
+                border-bottom: 2px solid #32cd32;
+                display: inline-block;
+            }
+
+        .reason-box {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .reason-box:hover {
+                transform: scale(1.05);
+                box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+            }
+
+            .reason-box h4 {
+                color: #2e8b57;
+                margin-top: 15px;
+                font-size: 1.5rem;
+            }
+
+            .reason-box p {
+                font-size: 1rem;
+                color: #555;
+                margin-top: 10px;
+            }
+    </style>
+    <section id="testimonials" class="container my-5">
+        <h2 class="text-center mb-4">What People Say About Islam</h2>
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <blockquote class="blockquote text-center">
+                        <p>"Embracing Islam brought peace and purpose to my life."</p>
+                        <footer class="blockquote-footer">A New Muslim</footer>
+                    </blockquote>
+                </div>
+                <div class="carousel-item">
+                    <blockquote class="blockquote text-center">
+                        <p>"The Quran offers guidance that aligns with both spirituality and reason."</p>
+                        <footer class="blockquote-footer">A Truth Seeker</footer>
+                    </blockquote>
+                </div>
+                <div class="carousel-item">
+                    <blockquote class="blockquote text-center">
+                        <p>"Prayer and community have given me a deeper connection to God."</p>
+                        <footer class="blockquote-footer">A Believer</footer>
+                    </blockquote>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </a>
+        </div>
+    </section>
+    <style>
+        #testimonials blockquote {
+            font-size: 1.2rem;
+            color: #555;
+            font-style: italic;
+            margin: 0 auto;
+            max-width: 700px;
+        }
+
+        #testimonials .blockquote-footer {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        #testimonials .carousel-control-prev-icon,
+        #testimonials .carousel-control-next-icon {
+            background-color: #32cd32;
+            border-radius: 50%;
+            padding: 10px;
+        }
+    </style>
+
+    <section id="recitationHighlight" class="container my-5">
+        <h2>Follow the Quran Recitation</h2>
+
+        <div id="quranText">
+            <p class="verse" data-time="0">1. In the name of Allah, the Most Gracious, the Most Merciful.</p>
+            <p class="verse" data-time="5">2. Praise be to Allah, Lord of the Worlds.</p>
+            <p class="verse" data-time="10">3. The Most Gracious, the Most Merciful.</p>
+            <p class="verse" data-time="15">4. Master of the Day of Judgment.</p>
+            <p class="verse" data-time="20">5. You alone we worship, and You alone we ask for help.</p>
+        </div>
+    </section>
+    <style>
+        #quranText {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+            #quranText .verse {
+                padding: 10px;
+                border-left: 3px solid transparent;
+                transition: all 0.3s ease;
+            }
+
+                #quranText .verse.active {
+                    background-color: #e6ffe6;
+                    border-left-color: #2e8b57;
+                    font-weight: bold;
+                }
+    </style>
+    <div class="modal fade" id="quoteModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Inspirational Quote</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="quoteText">"The strong one is not the one who overcomes others by strength, but the one who controls himself while in anger." - Prophet Muhammad (PBUH)</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="dailyReminder" class="text-center my-5">
+        <h2>Today's Islamic Reminder</h2>
+        <p id="reminderText" style="font-size: 1.5rem; font-weight: bold;"></p>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reminders = [
+                "Start your day with 'Bismillah'.",
+                "Make a dua for someone today.",
+                "Reflect on one verse from the Quran.",
+                "Be kind to someone who needs it.",
+                "Say 'SubhanAllah' 33 times today.",
+                "Seek forgiveness by saying 'Astaghfirullah'.",
+                "Help someone in need."
+            ];
+
+            const dayIndex = new Date().getDay();
+            document.getElementById('reminderText').textContent = reminders[dayIndex];
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+
+        const quotes = [
+            "The strong one is not the one who overcomes others by strength, but the one who controls himself while in anger.",
+            "The best among you are those who bring the greatest benefit to others.",
+            "Kindness is a mark of faith, and whoever has no kindness has no faith.",
+            "Do not waste water even if performing ablution on the banks of a flowing river."
+        ];
+
+        document.getElementById('openModal').addEventListener('click', () => {
+            const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+            document.getElementById('quoteText').textContent = randomQuote;
+            const quoteModal = new bootstrap.Modal(document.getElementById('quoteModal'));
+            quoteModal.show();
+        });
+    </script>
+</body>
+<footer>
+
+    <p>&copy; 2025 Discover Islam. All Rights Reserved.</p>
+    <p>"May Allah guide you to the straight path."</p>
+</footer>
+</html>
