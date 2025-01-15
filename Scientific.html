@@ -1,0 +1,396 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Universality of Islam</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            padding: 40px;
+        }
+
+        h2 {
+            color: #005f00;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        h4 {
+            color: #2e8b57;
+            margin-top: 30px;
+        }
+
+        .highlight {
+            background-color: #e6ffe6;
+            border-left: 5px solid #2e8b57;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .row img {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+        .quote {
+            font-style: italic;
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-left: 5px solid #2e8b57;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin: 30px auto;
+            max-width: 700px;
+        }
+
+        ul {
+            list-style-type: square;
+            margin-left: 20px;
+        }
+
+        footer {
+            background-color: #005f00;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+            footer a {
+                color: #90ee90;
+                text-decoration: underline;
+            }
+
+                footer a:hover {
+                    color: white;
+                }
+    </style>
+
+
+    <style>
+        #audioRecitations {
+            background: linear-gradient(to bottom right, #f0f8ff, #e6ffe6);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+            #audioRecitations h2 {
+                font-size: 2rem;
+                color: #2e8b57;
+                margin-bottom: 15px;
+                text-transform: uppercase;
+                border-bottom: 3px solid #32cd32;
+                display: inline-block;
+            }
+
+            #audioRecitations p {
+                font-size: 1.2rem;
+                color: #333;
+                margin-bottom: 20px;
+            }
+
+        #recitationDropdown {
+            padding: 10px;
+            font-size: 1.1rem;
+            border: 2px solid #32cd32;
+            border-radius: 5px;
+            margin-top: 10px;
+            background-color: #f9f9f9;
+            color: #006400;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+            #recitationDropdown:focus {
+                outline: none;
+                border-color: #2e8b57;
+                box-shadow: 0 0 5px rgba(46, 139, 87, 0.5);
+            }
+
+        #recitationAudio {
+            width: 100%;
+            max-width: 500px;
+            margin-top: 20px;
+            border: 2px solid #32cd32;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+
+    <style>
+        /* Global Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Navbar Styling */
+        nav {
+            background-color: #2e8b57;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+            nav .nav-link {
+                color: #fff !important;
+                font-weight: bold;
+            }
+
+                nav .nav-link:hover {
+                    color: #ffd700 !important;
+                }
+
+        /* "Did You Know?" Section */
+        #didYouKnow {
+            background: linear-gradient(to bottom right, #e6ffe6, #f0f8ff);
+            padding: 60px 20px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            position: relative;
+        }
+
+            #didYouKnow h2 {
+                font-size: 2.5rem;
+                color: #006400;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+                border-bottom: 4px solid #32cd32;
+                display: inline-block;
+            }
+
+        .fact {
+            margin: 20px 0;
+            font-size: 1.3rem;
+            color: #555;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-left: 4px solid #32cd32;
+            text-align: left;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+            .fact i {
+                color: #32cd32;
+                margin-right: 10px;
+            }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Interactive Buttons */
+        .btn-fact {
+            margin: 20px 5px;
+            padding: 10px 15px;
+            background-color: #006400;
+            color: white;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+            .btn-fact:hover {
+                background-color: #32cd32;
+                transform: scale(1.1);
+            }
+
+        /* Scroll-to-Top Button */
+        #scrollToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #32cd32;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+            #scrollToTop:hover {
+                background-color: #006400;
+                transform: scale(1.2);
+            }
+    </style>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Your other content -->
+    <!-- Required JavaScript for Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+   
+    <div id="header-placeholder"></div>
+    <style>
+        /* Navbar Styling */
+        .navbar {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .nav-link {
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+            .nav-link:hover,
+            .nav-link.active {
+                background-color: #28a745; /* Lighter green for hover effect */
+                color: #fff !important;
+                border-radius: 5px;
+            }
+
+        /* Dropdown Menu Styling */
+        .dropdown-menu {
+            background-color: #28a745; /* Match navbar green */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .dropdown-item {
+            font-size: 1rem;
+            padding: 12px 20px;
+            transition: all 0.3s ease-in-out;
+            white-space: nowrap;
+        }
+
+            .dropdown-item:hover {
+                background-color: #218838; /* Slightly darker green */
+                color: #fff;
+                border-radius: 5px;
+            }
+
+        /* Adjust Dropdown Placement */
+        .navbar .dropdown-menu {
+            left: auto; /* Ensure proper alignment */
+            right: 0; /* Align to the right edge of the button */
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .dropdown-menu {
+                min-width: 100%; /* Ensure full width on smaller screens */
+                padding: 10px 0;
+            }
+
+            .dropdown-item {
+                font-size: 1rem;
+                padding: 15px 20px; /* More padding for touch devices */
+            }
+        }
+    </style>
+
+    <section class="container">
+        <h2>The Universality of Islam</h2>
+        <p>Islam is a universal message of peace, guidance, and connection with the Creator. It transcends cultural, racial, and national boundaries, uniting humanity under the principle of worshiping Allah alone. Its teachings are timeless and resonate with the innate nature of every human being. The Quran reminds us:</p>
+
+        <div class="highlight">
+            <p><strong>“O mankind, indeed We have created you from male and female and made you peoples and tribes that you may know one another. Indeed, the most noble of you in the sight of Allah is the most righteous of you.”</strong> - Quran 49:13</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <img src="https://th.bing.com/th/id/OIP.spAeCeuAMmLLZufuNDfnHQHaFN?rs=1&pid=ImgDetMain" alt="Kaaba" class="img-fluid">
+                <p class="text-center"><strong>The Kaaba</strong>: A sacred sanctuary where Muslims from every corner of the world unite in worship.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="https://th.bing.com/th/id/OIP.8DVeZ08bKFZIV6qLw8KAIAHaD_?w=317&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Prayer in Turkey" class="img-fluid">
+                <p class="text-center"><strong>Prayer</strong>: A universal act of devotion performed by Muslims of all cultures and nations.</p>
+            </div>
+        </div>
+
+        <div class="quote">
+            "Islam is a universal path that nourishes the soul, offering guidance, compassion, and unity for all humanity." - A Scholar
+        </div>
+
+        <h4>What Makes Islam Universal?</h4>
+        <ul>
+            <li><strong>Equality Before Allah:</strong> Islam teaches that all humans are equal in worth and dignity. It emphasizes piety and righteousness as the true measures of a person’s character, not race, wealth, or status.</li>
+            <li><strong>Timeless Wisdom:</strong> The teachings of the Quran and Prophet Muhammad (peace be upon him) provide solutions for every era and society, addressing human needs with relevance and clarity.</li>
+            <li><strong>Simple Acts of Worship:</strong> Islam’s core practices—such as prayer, fasting, and charity—are profound yet simple, accessible to anyone regardless of their background.</li>
+            <li><strong>Respect for Diversity:</strong> Islam acknowledges the beauty of cultural and linguistic diversity, encouraging mutual understanding and cooperation among all people.</li>
+        </ul>
+
+        <h4>The Invitation to Islam</h4>
+        <p>Islam welcomes everyone who seeks truth, peace, and a connection with their Creator. It is not a religion confined to one group; it is a universal call to all of humanity. The Quran states:</p>
+        <blockquote>
+            "Say, [O Muhammad], 'O mankind, I am the Messenger of Allah to you all, [from Him] to whom belongs the dominion of the heavens and the earth. There is no deity except Him; He gives life and causes death.' So believe in Allah and His Messenger, the unlettered prophet who believes in Allah and His words, and follow him that you may be guided." - Quran 7:158
+        </blockquote>
+        <p>By embracing Islam, you join a global community united in worship, compassion, and a shared purpose. It is a path that brings clarity to life’s questions, peace to the soul, and eternal rewards in the Hereafter. Begin your journey today and discover the beauty of surrendering to Allah.</p>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+
+
+<footer>
+
+    <p>&copy; 2025 The Universality of Islam. All Rights Reserved.</p>
+</footer>
+<script>
+    $(function () {
+        $("#header-placeholder").load("header.html");
+        $("#footer-placeholder").load("footer.html");
+    });
+</script>
+</html>
+
