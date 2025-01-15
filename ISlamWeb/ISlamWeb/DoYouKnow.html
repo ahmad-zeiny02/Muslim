@@ -1,0 +1,371 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Islam - Did You Know?</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* Global Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Navbar Styling */
+        nav {
+            background-color: #2e8b57;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+            nav .nav-link {
+                color: #fff !important;
+                font-weight: bold;
+            }
+
+                nav .nav-link:hover {
+                    color: #ffd700 !important;
+                }
+
+        /* "Did You Know?" Section */
+        #didYouKnow {
+            background: linear-gradient(to bottom right, #e6ffe6, #f0f8ff);
+            padding: 60px 20px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            position: relative;
+        }
+
+            #didYouKnow h2 {
+                font-size: 2.5rem;
+                color: #006400;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+                border-bottom: 4px solid #32cd32;
+                display: inline-block;
+            }
+
+        .fact {
+            margin: 20px 0;
+            font-size: 1.3rem;
+            color: #555;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-left: 4px solid #32cd32;
+            text-align: left;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+            .fact i {
+                color: #32cd32;
+                margin-right: 10px;
+            }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Interactive Buttons */
+        .btn-fact {
+            margin: 20px 5px;
+            padding: 10px 15px;
+            background-color: #006400;
+            color: white;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+            .btn-fact:hover {
+                background-color: #32cd32;
+                transform: scale(1.1);
+            }
+
+        /* Scroll-to-Top Button */
+        #scrollToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #32cd32;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+            #scrollToTop:hover {
+                background-color: #006400;
+                transform: scale(1.2);
+            }
+    </style>
+</head>
+<body>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Your other content -->
+    <!-- Required JavaScript for Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container-fluid">
+            <!-- Brand -->
+            <a class="navbar-brand" href="index.html">Discover Islam</a>
+
+            <!-- Hamburger Menu for Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <!-- Home -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <!-- About Islam Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="learnMoreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            About Islam
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="learnMoreDropdown">
+                            <li><a class="dropdown-item" href="Pillars.html">Islamic Pillars</a></li>
+                            <li><a class="dropdown-item" href="WomenInIslam.html">Women in Islam</a></li>
+                            <li><a class="dropdown-item" href="recitation.html">Recitations</a></li>
+                            <li><a class="dropdown-item" href="DoYouKnow.html">Did You Know</a></li>
+                            <li><a class="dropdown-item" href="PrayerTime.html">Prayer Times</a></li>
+                            <li><a class="dropdown-item" href="IslamTimeLine.html">Islamic Timeline</a></li>
+
+                        </ul>
+                    </li>
+
+                    <!-- The Atheism Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="convinceDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            The Atheism
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="convinceDropdown">
+                            <li><a class="dropdown-item" href="convince.html">Evidence of God's existence  </a></li>
+                            <li><a class="dropdown-item" href="Scientific.html">Scientific Evidence</a></li>
+                            <li><a class="dropdown-item" href="Philosophical.html">Philosophical Reflections</a></li>
+                            <li><a class="dropdown-item" href="Real.html">Real-Life Stories</a></li>
+                            <li><a class="dropdown-item" href="Reflection.html">A Call to Reflection</a></li>
+                            <li><a class="dropdown-item" href="Impact.html">Impact of Belief</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <style>
+        /* Navbar Styling */
+        .navbar {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .nav-link {
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+            .nav-link:hover,
+            .nav-link.active {
+                background-color: #28a745; /* Lighter green for hover effect */
+                color: #fff !important;
+                border-radius: 5px;
+            }
+
+        /* Dropdown Menu Styling */
+        .dropdown-menu {
+            background-color: #28a745; /* Match navbar green */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .dropdown-item {
+            font-size: 1rem;
+            padding: 12px 20px;
+            transition: all 0.3s ease-in-out;
+            white-space: nowrap;
+        }
+
+            .dropdown-item:hover {
+                background-color: #218838; /* Slightly darker green */
+                color: #fff;
+                border-radius: 5px;
+            }
+
+        /* Adjust Dropdown Placement */
+        .navbar .dropdown-menu {
+            left: auto; /* Ensure proper alignment */
+            right: 0; /* Align to the right edge of the button */
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .dropdown-menu {
+                min-width: 100%; /* Ensure full width on smaller screens */
+                padding: 10px 0;
+            }
+
+            .dropdown-item {
+                font-size: 1rem;
+                padding: 15px 20px; /* More padding for touch devices */
+            }
+        }
+    </style>
+
+    <!-- Add Animate.css for Predefined Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- "Did You Know?" Section -->
+    <section id="didYouKnow">
+        <h2>Did You Know?</h2>
+        <div class="facts mt-5">
+            <div class="fact"><i class="bi bi-book"></i>The Quran is unchanged for over 1400 years.</div>
+            <div class="fact"><i class="bi bi-globe"></i>Islam is the second-largest religion with over 1.9 billion followers.</div>
+            <div class="fact"><i class="bi bi-person"></i>Muslims pray five times daily to connect with Allah.</div>
+            <div class="fact"><i class="bi bi-heart"></i>Charity (Zakat) is one of the Five Pillars of Islam.</div>
+            <div class="fact"><i class="bi bi-tree"></i>Prophet Muhammad (PBUH) emphasized planting trees for reward.</div>
+        </div>
+        <button class="btn-fact" onclick="showNewFact()">Show Another Fact</button>
+    </section>
+
+    <!-- Scroll-to-Top Button -->
+    <button id="scrollToTop" onclick="scrollToTop()">&#8679;</button>
+
+
+    <script>
+        const allFacts = [
+            "Water is mentioned over 60 times in the Quran, emphasizing its importance for life.",
+            "Muslims perform ablution (Wudu) multiple times a day, ensuring physical cleanliness.",
+            "The Fajr prayer before sunrise symbolizes spiritual awakening and discipline.",
+            "Between the 8th and 14th centuries, Muslim scholars contributed immensely to science, literature, and art.",
+            "Halal food guidelines ensure ethical and hygienic practices in preparation and consumption.",
+            "Muslims greet each other with 'As-Salamu Alaikum,' meaning 'Peace be upon you.'",
+            "Prophet Muhammad (PBUH) could neither read nor write, yet he conveyed the Quran's divine message.",
+            "During prayer, all Muslims, regardless of social status, stand shoulder to shoulder in unity.",
+            "Tawheed, the belief in the oneness of Allah, is the core principle of Islam.",
+            "Prophet Muhammad (PBUH) said, 'Smiling in the face of your brother is an act of charity.'",
+            "Eid al-Fitr marks the end of Ramadan, and Eid al-Adha commemorates Prophet Ibrahim's (AS) sacrifice.",
+            "Islamic art avoids depictions of living beings, focusing on intricate geometric patterns.",
+            "Ibn al-Haytham, a Muslim scholar, is considered the father of modern optics.",
+            "Muslims face the Kaaba in Mecca during prayer, a practice known as Qibla.",
+            "The Prophet (PBUH) said, 'The best of charity is that which is given to your family.'",
+            "The Quran played a significant role in preserving the Arabic language over centuries.",
+            "Islam teaches kindness to animals, and mistreating them is strictly prohibited.",
+            "Masjid Quba in Medina is the first mosque built in Islam.",
+            "The Angel Gabriel (AS) conveyed Allah’s revelations to the prophets.",
+            "The Quran emphasizes forgiveness, stating that Allah loves those who forgive.",
+            "The Quran and Hadith promote a balanced life, avoiding extremes.",
+            "Laylat al-Qadr, the most blessed night in Ramadan, is better than a thousand months.",
+            "The Zamzam well has provided water for thousands of years, never running dry.",
+            "Islamic scholars pioneered advancements in astronomy, using celestial navigation for prayer times and direction.",
+            "Shahada (Faith), Salah (Prayer), Zakat (Charity), Sawm (Fasting), and Hajj (Pilgrimage) form the foundation of Islam.",
+            "Muharram, the first month of the Islamic calendar, is one of the four sacred months.",
+            "Prophet Muhammad (PBUH) encouraged planting trees, saying it is a continuous charity (Sadaqah Jariyah).",
+            "The Quran mentions the expanding nature of the universe (Quran 51:47), aligning with modern cosmology.",
+            "The Prophet (PBUH) said, 'Seeking knowledge is an obligation upon every Muslim.'",
+            "During Hijrah, a spider’s web protected Prophet Muhammad (PBUH) by concealing him from his pursuers."
+        ];
+
+        function showNewFact() {
+            const randomFact = allFacts[Math.floor(Math.random() * allFacts.length)];
+            const factBox = document.createElement("div");
+            factBox.className = "fact";
+            factBox.innerHTML = `<i class="bi bi-lightbulb"></i> ${randomFact}`;
+            document.querySelector("#didYouKnow .facts").appendChild(factBox);
+        }
+
+        // Scroll-to-Top Functionality
+        const scrollToTopButton = document.getElementById("scrollToTop");
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 200) {
+                scrollToTopButton.style.display = "flex";
+            } else {
+                scrollToTopButton.style.display = "none";
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <footer>
+
+        <p>&copy; 2025 Discover Islam. All Rights Reserved.</p>
+        <p>"May Allah guide you to the straight path."</p>
+    </footer>
+    <style>
+        footer {
+            background: linear-gradient(to right, #3cb043, #005f00);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+            footer a {
+                color: #fff;
+                text-decoration: underline;
+                font-weight: bold;
+            }
+
+                footer a:hover {
+                    color: #32cd32;
+                    text-decoration: none;
+                }
+    </style>
+
+
+</body>
+</html>
