@@ -1,0 +1,696 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflections on Islam</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff; /* Light blue */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Reflection Section */
+        #reflection {
+            background: linear-gradient(to bottom, #ffffff, #eef2f3);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            margin: 40px auto;
+            max-width: 900px;
+        }
+
+            #reflection h2 {
+                text-align: center;
+                color: #2e8b57; /* Medium Sea Green */
+                font-size: 2.8rem;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+            }
+
+            #reflection h4 {
+                color: #228b22; /* Forest Green */
+                margin-top: 30px;
+            }
+
+            #reflection p {
+                font-size: 1.2rem;
+                text-align: justify;
+                line-height: 1.8;
+            }
+
+        blockquote {
+            font-style: italic;
+            color: #555;
+            padding: 20px 30px;
+            background-color: #f9f9f9;
+            margin: 25px 0;
+            border-left: 5px solid #2e8b57;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+            blockquote:hover {
+                background-color: #f0fff0; /* Light green */
+                transform: translateX(10px);
+            }
+
+        /* Quranic Verse Section */
+        #dynamicVerses {
+            margin-top: 40px;
+            padding: 40px;
+            text-align: center;
+            background: #f9fafb;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        #quranVerse {
+            font-size: 1.6rem;
+            font-style: italic;
+            color: #006400; /* Dark green */
+            margin: 20px auto;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        /* Scroll-to-Top Button */
+        .scroll-to-top-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #32cd32, #228b22); /* Green gradient */
+            color: white;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            display: none;
+            z-index: 1000;
+        }
+
+            .scroll-to-top-btn:hover {
+                background: linear-gradient(135deg, #228b22, #006400);
+                transform: scale(1.1);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            #reflection {
+                padding: 30px;
+            }
+
+                #reflection h2 {
+                    font-size: 2rem;
+                }
+
+                #reflection h4 {
+                    font-size: 1.4rem;
+                }
+
+                #reflection p {
+                    font-size: 1rem;
+                }
+
+            .scroll-to-top-btn {
+                font-size: 1.2rem;
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <style>
+        #audioRecitations {
+            background: linear-gradient(to bottom right, #f0f8ff, #e6ffe6);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+            #audioRecitations h2 {
+                font-size: 2rem;
+                color: #2e8b57;
+                margin-bottom: 15px;
+                text-transform: uppercase;
+                border-bottom: 3px solid #32cd32;
+                display: inline-block;
+            }
+
+            #audioRecitations p {
+                font-size: 1.2rem;
+                color: #333;
+                margin-bottom: 20px;
+            }
+
+        #recitationDropdown {
+            padding: 10px;
+            font-size: 1.1rem;
+            border: 2px solid #32cd32;
+            border-radius: 5px;
+            margin-top: 10px;
+            background-color: #f9f9f9;
+            color: #006400;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+            #recitationDropdown:focus {
+                outline: none;
+                border-color: #2e8b57;
+                box-shadow: 0 0 5px rgba(46, 139, 87, 0.5);
+            }
+
+        #recitationAudio {
+            width: 100%;
+            max-width: 500px;
+            margin-top: 20px;
+            border: 2px solid #32cd32;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+
+    <style>
+        /* Global Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Navbar Styling */
+        nav {
+            background-color: #2e8b57;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+            nav .nav-link {
+                color: #fff !important;
+                font-weight: bold;
+            }
+
+                nav .nav-link:hover {
+                    color: #ffd700 !important;
+                }
+
+        /* "Did You Know?" Section */
+        #didYouKnow {
+            background: linear-gradient(to bottom right, #e6ffe6, #f0f8ff);
+            padding: 60px 20px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            position: relative;
+        }
+
+            #didYouKnow h2 {
+                font-size: 2.5rem;
+                color: #006400;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+                border-bottom: 4px solid #32cd32;
+                display: inline-block;
+            }
+
+        .fact {
+            margin: 20px 0;
+            font-size: 1.3rem;
+            color: #555;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-left: 4px solid #32cd32;
+            text-align: left;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+            .fact i {
+                color: #32cd32;
+                margin-right: 10px;
+            }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Interactive Buttons */
+        .btn-fact {
+            margin: 20px 5px;
+            padding: 10px 15px;
+            background-color: #006400;
+            color: white;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+            .btn-fact:hover {
+                background-color: #32cd32;
+                transform: scale(1.1);
+            }
+
+        /* Scroll-to-Top Button */
+        #scrollToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #32cd32;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+            #scrollToTop:hover {
+                background-color: #006400;
+                transform: scale(1.2);
+            }
+    </style>
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Your other content -->
+    <!-- Required JavaScript for Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container-fluid">
+            <!-- Brand -->
+            <a class="navbar-brand" href="index.html">Discover Islam</a>
+
+            <!-- Hamburger Menu for Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <!-- Home -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <!-- About Islam Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="learnMoreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            About Islam
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="learnMoreDropdown">
+                            <li><a class="dropdown-item" href="Pillars.html">Islamic Pillars</a></li>
+                            <li><a class="dropdown-item" href="WomenInIslam.html">Women in Islam</a></li>
+                            <li><a class="dropdown-item" href="recitation.html">Recitations</a></li>
+                            <li><a class="dropdown-item" href="DoYouKnow.html">Did You Know</a></li>
+                            <li><a class="dropdown-item" href="PrayerTime.html">Prayer Times</a></li>
+                            <li><a class="dropdown-item" href="IslamTimeLine.html">Islamic Timeline</a></li>
+
+                        </ul>
+                    </li>
+
+                    <!-- The Atheism Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="convinceDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            The Atheism
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="convinceDropdown">
+                            <li><a class="dropdown-item" href="convince.html">Evidence of God's existence  </a></li>
+                            <li><a class="dropdown-item" href="Scientific.html">Scientific Evidence</a></li>
+                            <li><a class="dropdown-item" href="Philosophical.html">Philosophical Reflections</a></li>
+                            <li><a class="dropdown-item" href="Real.html">Real-Life Stories</a></li>
+                            <li><a class="dropdown-item" href="Reflection.html">A Call to Reflection</a></li>
+                            <li><a class="dropdown-item" href="Impact.html">Impact of Belief</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <style>
+        /* Navbar Styling */
+        .navbar {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .nav-link {
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+            .nav-link:hover,
+            .nav-link.active {
+                background-color: #28a745; /* Lighter green for hover effect */
+                color: #fff !important;
+                border-radius: 5px;
+            }
+
+        /* Dropdown Menu Styling */
+        .dropdown-menu {
+            background-color: #28a745; /* Match navbar green */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .dropdown-item {
+            font-size: 1rem;
+            padding: 12px 20px;
+            transition: all 0.3s ease-in-out;
+            white-space: nowrap;
+        }
+
+            .dropdown-item:hover {
+                background-color: #218838; /* Slightly darker green */
+                color: #fff;
+                border-radius: 5px;
+            }
+
+        /* Adjust Dropdown Placement */
+        .navbar .dropdown-menu {
+            left: auto; /* Ensure proper alignment */
+            right: 0; /* Align to the right edge of the button */
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .dropdown-menu {
+                min-width: 100%; /* Ensure full width on smaller screens */
+                padding: 10px 0;
+            }
+
+            .dropdown-item {
+                font-size: 1rem;
+                padding: 15px 20px; /* More padding for touch devices */
+            }
+        }
+    </style>
+    <section id="reflection">
+        <h2 class="text-center mb-4">Reflektioner om Islam</h2>
+        <div class="card p-4 shadow-lg">
+            <p class="mb-4">Kära vän,</p>
+            <p>
+                Jag skriver för att dela några av mina reflektioner om islam – inte för att övertyga, utan för att erbjuda en inblick i vad som gör denna tro så vacker och meningsfull för mig. Islam handlar inte bara om ritualer utan om en djup förbindelse med Gud, kärlek till mänskligheten och strävan efter balans i livet.
+            </p>
+
+            <h4>1. Gud i islam: En fullständig källa till hopp</h4>
+            <p>
+                Inom islam tror vi på en Gud som är oändligt barmhärtig, rättvis och nära sina skapelser. Vi behöver inga mellanhänder för att tala med Honom – Han hör varje bön och ser varje handling. Gud säger i Koranen:
+                <blockquote>”Och Vi är närmare honom än hans halspulsåder.” [Koranen 50:16]</blockquote>
+                Denna relation med Gud ger mig en oöverträffad trygghet och vetskap om att jag alltid är i Hans vård.
+            </p>
+
+            <h4>2. Jesus (ʿĪsā) i islam: Ett mirakel och en profet</h4>
+            <p>
+                Jesus, eller ʿĪsā, är en älskad profet i islam. Vi tror att han föddes mirakulöst av jungfru Maria (Maryam), som är en av de mest hedrade kvinnorna i vår tro. Gud säger:
+                <blockquote>”Och [minns] Maria, som bevarade sin kyskhet, och till vilken Vi blåste in av Vår ande.” [Koranen 21:91]</blockquote>
+                Även om vi inte ser Jesus som Guds son, hedrar vi honom som en av de största profeterna som förde Guds budskap.
+            </p>
+
+            <h4>3. Koranen: En bok som talar till hjärtat</h4>
+            <p>
+                Koranen är inte bara en bok utan en levande vägledning för varje aspekt av livet. Dess ord talar direkt till hjärtat och uppmuntrar oss att reflektera över vår plats i världen. Gud säger:
+                <blockquote>”Det är en välsignad bok som Vi har uppenbarat, så att de kan begrunda dess verser.” [Koranen 38:29]</blockquote>
+                Att läsa Koranen ger mig alltid ett nytt perspektiv och en djupare koppling till mitt syfte i livet.
+            </p>
+
+            <h4>4. Vetenskap och förnuft i islam</h4>
+            <p>
+                Islam uppmanar oss att använda vår intelligens och utforska universum. Många vetenskapliga upptäckter har rötter i muslimska forskares arbete under islams guldålder. Till exempel beskriver Koranen universums expansion:
+                <blockquote>”Och Vi har byggt himlen med kraft, och Vi vidgar den ständigt.” [Koranen 51:47]</blockquote>
+                För mig visar detta att tro och vetenskap kan gå hand i hand.
+            </p>
+
+            <h4>5. Profeterna: Våra lärare</h4>
+            <p>
+                Gud sände profeter till varje folk för att vägleda dem. Från Adam till Muhammed ﷺ delade de alla samma budskap: dyrka Gud ensam och lev rättfärdigt. Profeten Muhammed ﷺ sa:
+                <blockquote>”Jag är närmast Jesus, eftersom det inte har funnits någon profet mellan honom och mig.” [Bukhari]</blockquote>
+                Denna sammanhållning mellan profeterna inspirerar mig att respektera alla trossystem och kulturer.
+            </p>
+
+            <h4>6. Islam: En livsstil av medkänsla</h4>
+            <p>
+                Islam är en livsstil som prioriterar välgörenhet, rättvisa och omsorg om andra. Profeten Muhammed ﷺ sa:
+                <blockquote>”Den bästa av er är den som är bäst mot andra.” [Tirmidhi]</blockquote>
+                Genom att följa dessa principer försöker jag vara en bättre människa varje dag.
+            </p>
+
+            <h4>Avslutning: En öppen inbjudan</h4>
+            <p>
+                Mitt syfte med att dela detta är inte att övertala dig utan att skapa förståelse. Om du har några frågor eller vill veta mer om islam är jag här för att lyssna och svara. Jag ser fram emot att höra dina tankar också.
+            </p>
+            <p>
+                Vänliga hälsningar,<br>
+                <strong>Ahmad Zeiny</strong>
+            </p>
+        </div>
+    </section>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quranic Inspiration</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <style>
+            /* Styling for Quranic Verse Section */
+            #dynamicVerses {
+                background: linear-gradient(to bottom right, #e6ffe6, #f0f8ff);
+                padding: 40px 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                margin: 20px auto;
+                max-width: 700px;
+            }
+
+            #quranVerse {
+                font-size: 1.5rem;
+                font-style: italic;
+                color: #006400; /* Dark Green */
+                transition: opacity 0.5s ease-in-out;
+                margin: 20px auto;
+            }
+
+            /* Footer Styling */
+            footer {
+                background: linear-gradient(to right, #3cb043, #005f00);
+                color: white;
+                padding: 30px 0;
+                text-align: center;
+                font-size: 1rem;
+            }
+
+                footer a {
+                    color: #fff;
+                    text-decoration: underline;
+                    font-weight: bold;
+                }
+
+                    footer a:hover {
+                        color: #32cd32;
+                        text-decoration: none;
+                    }
+
+            /* Scroll-to-Top Button */
+            .scroll-to-top-btn {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background: linear-gradient(135deg, #32cd32, #228b22); /* Green gradient */
+                color: white;
+                padding: 12px 18px;
+                border: none;
+                border-radius: 50%;
+                font-size: 1.5rem;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                cursor: pointer;
+                display: none;
+                z-index: 1000;
+                transition: background-color 0.3s ease, transform 0.3s ease;
+            }
+
+                .scroll-to-top-btn:hover {
+                    background: linear-gradient(135deg, #228b22, #006400);
+                    transform: scale(1.1);
+                    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+                }
+        </style>
+        <!-- Quranic Verse Section -->
+        <section id="dynamicVerses" class="text-center">
+            <h2>Quranic Inspiration</h2>
+            <blockquote id="quranVerse">
+                "Indeed, in the remembrance of Allah do hearts find rest." - Quran 13:28
+            </blockquote>
+        </section>
+
+        <!-- Scroll-to-Top Button -->
+        <button class="scroll-to-top-btn" id="scrollToTopBtn"><i class="bi bi-arrow-up-circle"></i></button>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2025 Discover Islam. All Rights Reserved.</p>
+            <p>"May Allah guide you to the straight path."</p>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                // Show/Hide Scroll-to-Top Button
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 100) {
+                        $("#scrollToTopBtn").fadeIn();
+                    } else {
+                        $("#scrollToTopBtn").fadeOut();
+                    }
+                });
+
+                // Scroll to Top
+                $("#scrollToTopBtn").click(function () {
+                    $("html, body").animate({ scrollTop: 0 }, 600);
+                    return false;
+                });
+
+                // Quranic Verses Rotation
+                const verses = [
+                    { text: "Indeed, in the remembrance of Allah do hearts find rest.", reference: "Quran 13:28" },
+                    { text: "So whoever does an atom's weight of good will see it.", reference: "Quran 99:7" },
+                    { text: "Do not despair of the mercy of Allah. Indeed, Allah forgives all sins.", reference: "Quran 39:53" },
+                    { text: "And whoever puts their trust in Allah, then He will suffice him.", reference: "Quran 65:3" }
+                ];
+
+                let index = 0;
+                setInterval(function () {
+                    const verse = verses[index];
+                    $("#quranVerse").fadeOut(500, function () {
+                        $(this).html(`"${verse.text}" - ${verse.reference}`).fadeIn(500);
+                    });
+                    index = (index + 1) % verses.length;
+                }, 5000); // Change verse every 5 seconds
+            });
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <style>
+            /* Navbar Styling */
+            .navbar {
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            }
+
+            .navbar-brand {
+                font-size: 1.5rem;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+            .nav-link {
+                font-size: 1.1rem;
+                transition: all 0.3s ease;
+            }
+
+                .nav-link:hover,
+                .nav-link.active {
+                    background-color: #28a745; /* Lighter green for hover effect */
+                    color: #fff !important;
+                    border-radius: 5px;
+                }
+
+            /* Dropdown Menu Styling */
+            .dropdown-menu {
+                background-color: #28a745; /* Match navbar green */
+                border-radius: 8px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            }
+
+            .dropdown-item {
+                font-size: 1rem;
+                padding: 12px 20px;
+                transition: all 0.3s ease-in-out;
+                white-space: nowrap;
+            }
+
+                .dropdown-item:hover {
+                    background-color: #218838; /* Slightly darker green */
+                    color: #fff;
+                    border-radius: 5px;
+                }
+
+            /* Adjust Dropdown Placement */
+            .navbar .dropdown-menu {
+                left: auto; /* Ensure proper alignment */
+                right: 0; /* Align to the right edge of the button */
+            }
+
+            /* Mobile Responsiveness */
+            @media (max-width: 768px) {
+                .dropdown-menu {
+                    min-width: 100%; /* Ensure full width on smaller screens */
+                    padding: 10px 0;
+                }
+
+                .dropdown-item {
+                    font-size: 1rem;
+                    padding: 15px 20px; /* More padding for touch devices */
+                }
+            }
+        </style>
+
+</body>
+</html>
